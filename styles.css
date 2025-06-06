@@ -1,0 +1,249 @@
+/* General body background fallback */
+body {
+  background: #000;
+  margin: 500px;
+  padding: 0;
+}
+
+/* Overlay for darkening backgrounds */
+.bg-overlay {
+  background: rgba(0,0,0,0.7);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* First section background */
+.container-1 {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 800px;
+  padding: 40px 0;
+}
+
+/* Second section background */
+.container-2 {
+  background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+  width: 100vw;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-2 .row {
+  background: rgba(0,0,0,0.7);
+  border-radius: 16px;
+  padding: 60px 40px;
+  margin: 0 30px;
+  align-items: center;
+  width: 90vw;
+  max-width: 1400px;
+  display: flex;
+  gap: 60px;
+  flex-direction: row; /* Image right, text left */
+}
+
+.container-2 .col-md-6:first-child {
+  /* Text column (left) */
+  order: 1;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-right: 60px;
+}
+
+.container-2 .col-md-6:last-child {
+  /* Image column (right) */
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.container-2 img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* --- Section Three: Different background image and layout --- */
+.container-3 {
+  background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 900px;
+  width: 100vw;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-3 .row {
+  background: rgba(0,0,0,0.7);
+  border-radius: 16px;
+  padding: 60px 40px;
+  margin: 0 30px;
+  align-items: center;
+  width: 90vw;
+  max-width: 1400px;
+  display: flex;
+  gap: 60px;
+  flex-direction: row-reverse; /* Image left, text right */
+}
+
+.container-3 .col-md-6:first-child {
+  /* Image column (left) */
+  order: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 60px;
+}
+
+.container-3 .col-md-6:last-child {
+  /* Text column (right) */
+  order: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.container-3 img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.white-text {
+  color: white;
+}
+
+/* Responsive adjustments for section two and three */
+@media (max-width: 992px) {
+  .container-2 .row,
+  .container-3 .row {
+    flex-direction: column !important;
+    gap: 30px;
+    padding: 30px 10px;
+    width: 98vw;
+  }
+  .container-2 .col-md-6:first-child,
+  .container-2 .col-md-6:last-child,
+  .container-3 .col-md-6:first-child,
+  .container-3 .col-md-6:last-child {
+    padding: 10px 0 !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-2 img,
+  .container-3 img {
+    max-width: 90vw;
+  }
+  .container-2,
+  .container-3 {
+    min-height: 600px;
+    padding: 20px 0;
+  }
+}
+
+/* Netflix logo style */
+#net {
+  font-family: serif;
+  color: #e50914;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px #000;
+  text-align: left;
+  margin-bottom: 0;
+  display: block;
+}
+
+/* Sign In button style */
+.btn-danger, #Get {
+  background-color: #e50914;
+  color: black !important;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+  align-self: flex-start; /* Aligns the button to the left in the text column */
+  margin-right: 70px;
+  margin-top: 0.5px;
+
+}
+
+.btn-danger:hover, #Get:hover,
+.btn-danger:focus, #Get:focus {
+  background-color: #f40612;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Input style */
+input.form-control {
+  min-width: 250px;
+  background: rgba(255,255,255,0.85);
+  color: white !important;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* General text color for readability */
+.bg-overlay h1,
+.bg-overlay label,
+.bg-overlay .h2 {
+  color: black;
+}
+
+/* Section container styling */
+.container {
+  padding: 30px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: #fff 1px solid;
+}
+
+/* Section headings */
+.h2 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: white;
+}
+
+/* Responsive Netflix logo */
+@media (max-width: 576px) {
+  #net {
+    font-size: 2rem;
+  }
+  .container-1, .container-2 {
+    min-height: 500px;
+    padding: 20px 0;
+  }
+}
